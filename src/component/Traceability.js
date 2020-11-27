@@ -3,7 +3,7 @@ import SelectBox from 'devextreme-react/select-box';
 import CheckBox from 'devextreme-react/check-box';
 import DataGrid, { FilterRow, HeaderFilter, SearchPanel, Column, Editing,} from 'devextreme-react/data-grid';
 import service from './data.js';
-import './traceability.css'
+import './styles/Sidebar.css'
 
 const saleAmountEditorOptions = { format: 'currency', showClearButton: true };
 

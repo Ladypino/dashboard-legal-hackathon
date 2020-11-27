@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector } from 'recharts';
 import '../index.css' ;
-
+import logoidentify from '../images/identify.svg'
 const data = [
   { name: 'NDA', value: 400 , fill:'#B455AA' },
   { name: 'CIBERSECURITY', value: 300 , fill:'#DCAFFF' },
@@ -75,7 +75,9 @@ export default class Statistics extends PureComponent {
     return (
      
       <PieChart width={8999} height={6786}>
-       
+        <div className='containerLogoAaccen'>
+       <img src={logoIdentify} className='logoidentify'/> 
+    </div>
         <Pie
           activeIndex={this.state.activeIndex}
           activeShape={renderActiveShape}

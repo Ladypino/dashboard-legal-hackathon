@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Sidebar from './pages/sidebar';
+import Sidebar from './component/sidebar.js';
+import LandingPage from './pages/LandingPage.js';
 
 export const ShowContext = React.createContext(null);
 
@@ -12,6 +13,17 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" exact >
+          <ShowContext.Provider
+            value={{
+              formToShow: [formToShow, setFormToShow],
+              positionScrollForm: [positionScrollForm, setPositionScrollForm]
+            }}
+          >
+            <LandingPage/>
+          </ShowContext.Provider>
+        </Route>
+
         <Route path="/Overview" exact >
           <ShowContext.Provider
             value={{

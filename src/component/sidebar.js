@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import './Sidebar.css';
+import '../component/styles/Sidebar.css';
 import Traceability from './Traceability.js'
 import Statistics from './statistics.js'
-import LandingPage from './LandingPage.js'
+import logo from '../images/LogoAccen.svg'
 import { ShowContext } from '../App'
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -33,13 +33,15 @@ function Sidebar() {
 
   if (formToShowValue === 'Overview') form = <Statistics/>
   if (formToShowValue === 'Tickets') form = <Traceability />
-  if (formToShowValue === 'Teams') form = <LandingPage />
-  if (formToShowValue === 'Settings') form = <LandingPage />
-  if (formToShowValue === 'Logout') form = <LandingPage />
+  if (formToShowValue === 'Teams') form = <Statistics/>
+  if (formToShowValue === 'Settings') form = <Traceability />
+  if (formToShowValue === 'Logout') form = <Statistics/>
 
   return (
     <div className='containerSidebar'>
-      
+      <div className='containerLogoAaccen'>
+       <img src={logo} className='logoAccen'/> 
+    </div>
         <button  className={classButtonArchiveOVER}
           onClick={() => {
             setFormToShowValue('Overview');

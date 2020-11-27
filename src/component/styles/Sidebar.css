@@ -51,6 +51,7 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  outline: none;
 }
 .archiveBtnOff:hover{
   background: #40015e;
@@ -70,6 +71,7 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  outline: none;
 }
 .archiveBtnOn:hover{
   background: #40015e;
@@ -114,4 +116,21 @@
     color: white;
   }
   
+}
+.containerLogoAaccen{
+  display: flex;
+  box-sizing: unset;
+  padding:5em;
+  width: auto;
+  color:white;
+  background: black;
+  border: none;
+  margin-right: 4px;
+  height:15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.logoAccen{
+  width: 70%;
 }
