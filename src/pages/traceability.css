@@ -1,0 +1,17 @@
+#gridContainer{
+    flex-direction: row;
+    position: relative;
+    top: 9em;
+    width: 75%;
+    height: 30em;
+    margin-inline-start: 19em;
+   
+   
+  }
+  .dx-icon-edit-button-addrow::before {
+    content: "";
+    color: purple;
+}
+
+
+

@@ -1,0 +1,78 @@
+.toggleHidden {
+    display: table-row;
+    flex-direction: column;
+    position: fixed;
+    transform: translateX(0%);
+    right: -1;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    width: 250.99px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+
+    
+  }
+
+
+  .boxSection:hover{
+    background: #460073;
+    color:white;
+  }
+  .textBurgerToggle:hover{
+    color:white;
+  }
+  .oli{
+    text-decoration: none;
+  }
+  
+  @media screen and (min-width:1024px){
+    .toggleHidden {
+      flex-direction: row;
+      position: relative;
+      transform: translateX(0%);
+      width: auto;
+      transition: none;
+      box-sizing: inherit;
+      margin-right: 10px;
+      border: none;
+      background: black;
+      top:0px;
+    }
+    .toggleVisible {
+      flex-direction: row;
+      position: relative;
+      top: 0px;
+      right: -1;;
+      width: auto;
+      height: 15px;
+      border: none;
+      box-sizing: border-box;
+      transition: none;
+      z-index: 3;
+      margin-right: 10px;
+      color:white;
+      background:black;
+    }
+  
+    .textBurgerToggle{
+      font-size:20px;
+      color: white;
+    }
+    .boxSection {
+      display: flex;
+      box-sizing: unset;
+      padding: 50px;
+      width: 150px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      height: 15px;
+      justify-content: center;
+      align-items: center;
+      top: 200px;
+  }
+    
+  }
+  

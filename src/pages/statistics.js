@@ -3,12 +3,12 @@ import { PieChart, Pie, Sector } from 'recharts';
 import '../index.css' ;
 
 const data = [
-  { name: 'NDA', value: 400 },
-  { name: 'CIBERSEGURIDAD', value: 300 },
-  { name: 'LBA', value: 300 },
-  { name: 'BHP', value: 200 },
-  { name: 'ENEL', value: 100 },
-];
+  { name: 'NDA', value: 400 , fill:'#B455AA' },
+  { name: 'CIBERSECURITY', value: 300 , fill:'#DCAFFF' },
+  { name: 'LBA', value: 300 , fill:'#A100FF'},
+  { name: 'BHP', value: 200 , fill:'#7500C0'},
+  { name: 'ENEL', value: 100 , fill:'#460073' },
+]
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -58,7 +58,7 @@ const renderActiveShape = (props) => {
 };
 
 
-export default class COSA extends PureComponent {
+export default class Statistics extends PureComponent {
   
 
   state = {
@@ -73,7 +73,9 @@ export default class COSA extends PureComponent {
 
   render() {
     return (
-      <PieChart width={2000} height={2000}>
+     
+      <PieChart width={8999} height={6786}>
+       
         <Pie
           activeIndex={this.state.activeIndex}
           activeShape={renderActiveShape}

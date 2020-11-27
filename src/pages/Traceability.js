@@ -3,13 +3,13 @@ import SelectBox from 'devextreme-react/select-box';
 import CheckBox from 'devextreme-react/check-box';
 import DataGrid, { FilterRow, HeaderFilter, SearchPanel, Column, Editing,} from 'devextreme-react/data-grid';
 import service from './data.js';
-
+import './traceability.css'
 
 const saleAmountEditorOptions = { format: 'currency', showClearButton: true };
 
-class Trazabilidad extends React.Component {
+class Traceability extends React.Component {
   
-
+ 
   constructor(props) {
     super(props);
     this.state = { events: [] };
@@ -31,10 +31,10 @@ class Trazabilidad extends React.Component {
     this.orders = service.getOrders();
     this.applyFilterTypes = [{
       key: 'auto',
-      name: 'Immediately'
+      name: ''
     }, {
       key: 'onClick',
-      name: 'On Button Click'
+      name: ''
     }];
     this.saleAmountHeaderFilter = [{
       text: 'Less than 10',
@@ -86,8 +86,9 @@ class Trazabilidad extends React.Component {
 
   render() {
     return (
+      
       <div>
-       
+     
         <DataGrid id="gridContainer"
           alignment="right"
           ref={(ref) => this.dataGrid = ref}
@@ -118,9 +119,9 @@ class Trazabilidad extends React.Component {
           <FilterRow visible={this.state.showFilterRow}
             applyFilter={this.state.currentFilter} />
           <HeaderFilter visible={this.state.showHeaderFilter} />
-          <SearchPanel visible={true}
+         {/*  <SearchPanel visible={true}
             width={240}
-            placeholder="Search..." />
+            placeholder="Search..." /> */}
           <Column dataField="Assigned Agent"
             alignment="right"
             width={180}
@@ -173,28 +174,7 @@ class Trazabilidad extends React.Component {
         </DataGrid>
 
        
-        <div className="options">
-          <div className="caption">Options</div>
-          <div className="option">
-            <span>Apply Filter </span>
-            <SelectBox items={this.applyFilterTypes}
-              value={this.state.currentFilter}
-              onValueChanged={this.onCurrentFilterChanged}
-              valueExpr="key"
-              displayExpr="name"
-              disabled={!this.state.showFilterRow} />
-          </div>
-          <div className="option">
-            <CheckBox text="Filter Row"
-              value={this.state.showFilterRow}
-              onValueChanged={this.onShowFilterRowChanged} />
-          </div>
-          <div className="option">
-            <CheckBox text="Header Filter"
-              value={this.state.showHeaderFilter}
-              onValueChanged={this.onShowHeaderFilterChanged} />
-          </div>
-        </div>
+        
       </div>
     );
     
@@ -252,4 +232,4 @@ function getOrderDay(rowData) {
 }
 
 
-export default Trazabilidad;
+export default Traceability;
