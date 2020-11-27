@@ -4,6 +4,11 @@ import Traceability from './Traceability.js'
 import Statistics from './statistics.js'
 import logo from '../images/LogoAccen.svg'
 import { ShowContext } from '../App'
+import logoO from '../images/overview.svg'
+import logoT from '../images/tickets.svg'
+import logoP from '../images/persona.svg'
+import logoS from '../images/settings.svg'
+import logoL from '../images/logout.svg'
 import { animateScroll as scroll } from 'react-scroll';
 
 
@@ -42,28 +47,53 @@ function Sidebar() {
       <div className='containerLogoAaccen'>
        <img src={logo} className='logoAccen'/> 
     </div>
+    <div className='containerLogos'>
+    <img src={logoO} className='logossider'/> 
         <button  className={classButtonArchiveOVER}
           onClick={() => {
             setFormToShowValue('Overview');
             setPositionScrollFormValue(scrollForm);
-          }}>Overview</button>
+          }}>
+          Overview
+          </button>
+          </div>
+
+          <div className='containerLogos'>
+          <img src={logoT} className='logossider'/> 
          <button className={classButtonArchiveTick}
           onClick={() => {
             setFormToShowValue('Tickets');
             setPositionScrollFormValue(scrollForm)
-          }}>Tickets</button>
+          }}>
+          Tickets</button>
+          </div>
+
+          <div className='containerLogos'>
+          <img src={logoP} className='logossider'/>
         <button className={classButtonArchiveTEAMS} onClick={() => {
           setFormToShowValue('Teams');
           setPositionScrollFormValue(scrollForm)
-        }}>Teams</button>
+        }}>
+        Teams</button>
+        </div>
+
+        <div className='containerLogos'>
+        <img src={logoS} className='logossider'/> 
         <button className={classButtonArchiveSETT} onClick={() => {
           setFormToShowValue('Settings');
           setPositionScrollFormValue(scrollForm);
-        }}>Settings</button>
+        }}>
+        Settings</button>
+        </div>
+
+        <div className='containerLogos'>
+        <img src={logoL} className='logossider'/> 
         <button className={classButtonArchiveLOG} onClick={() => {
           setFormToShowValue('Logout');
           setPositionScrollFormValue(scrollForm);
-        }}>Logout</button>
+        }}>
+        Logout</button> 
+         </div>
       
       {form}
     </div>

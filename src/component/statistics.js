@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import { PieChart, Pie, Sector } from 'recharts';
-import '../index.css' ;
-import logoidentify from '../images/identify.svg'
+import logo from '../images/Identify.svg'
+import '../component/styles/statistics.css';
 const data = [
   { name: 'NDA', value: 400 , fill:'#B455AA' },
   { name: 'CIBERSECURITY', value: 300 , fill:'#DCAFFF' },
@@ -73,11 +73,29 @@ export default class Statistics extends PureComponent {
 
   render() {
     return (
-     
+   <Fragment>
+
+      <div  className='ContainerT'>
+       <div className='headerT'>
+         <h3 className='Tickets'>TICKETS</h3>
+         <div className='Excel'>Export to Exel</div>
+         <div className='Date'>Asig for Day</div>
+       </div>
+
+       <div className='status'>All Tickets 10</div>
+       <div className='status'>Pending 4</div>
+       <div className='status'>Solved 7</div>
+       <div className='status'>In Process 12</div>
+       <div className='status'>On Hold 20</div>
+
+<div className='ubic'>
+  <div className='containerIdentify'>
+  <img src={logo} className='logoidentify'/> 
+  </div>
+    
+
       <PieChart width={8999} height={6786}>
-        <div className='containerLogoAaccen'>
-       <img src={logoIdentify} className='logoidentify'/> 
-    </div>
+      
         <Pie
           activeIndex={this.state.activeIndex}
           activeShape={renderActiveShape}
@@ -92,6 +110,9 @@ export default class Statistics extends PureComponent {
           class="recharts-layer recharts-pie-sector"
         />
       </PieChart>
+      </div>
+      </div>
+       </Fragment>
     );
   }
 }

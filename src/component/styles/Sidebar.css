@@ -1,7 +1,7 @@
 .containerSidebar {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   transform: translateX(-3%);
   right: -1;
   width: 300px;
@@ -41,7 +41,7 @@
 .archiveBtnOff{
   display: flex;
   box-sizing: unset;
-  padding:5em;
+  padding:2.1em;
   width: auto;
   color:white;
   background: black;
@@ -50,7 +50,7 @@
   height:15px;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
 }
 .archiveBtnOff:hover{
@@ -61,7 +61,7 @@
 .archiveBtnOn{
   display: flex;
   box-sizing: unset;
-  padding:5em;
+  padding:2.1em;
   width: auto;
   color:white;
   background: black;
@@ -70,7 +70,7 @@
   height:15px;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
 }
 .archiveBtnOn:hover{
@@ -82,6 +82,47 @@
   text-decoration: none;
 }
 
+.containerLogoAaccen{
+  display: flex;
+  box-sizing: unset;
+  padding:3em;
+  width: auto;
+  color:white;
+  background: black;
+  border: none;
+  margin-right: 4px;
+  height:15px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.logoAccen{
+  width: 40%;
+}
+
+.logossider{
+  width: 20%;
+      }
+.containerLogos{
+
+ display: flex;
+ box-sizing: unset;
+ padding:2.5em;
+ width: auto;
+ color:white;
+ background: black;
+ border: none;
+ margin-right: 4px;
+ height:15px;
+ justify-content: center;
+ align-items: center;
+ font-size: 18px;
+ outline: none;
+}
+.containerLogos:hover{
+  background: #40015e;
+  color:white;
+}
 @media screen and (min-width:1024px){
   .toggleHidden {
     flex-direction: row;
@@ -120,7 +161,7 @@
 .containerLogoAaccen{
   display: flex;
   box-sizing: unset;
-  padding:5em;
+  padding:3em;
   width: auto;
   color:white;
   background: black;
@@ -129,8 +170,8 @@
   height:15px;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+ 
 }
 .logoAccen{
-  width: 70%;
+  width: 40%;
 }

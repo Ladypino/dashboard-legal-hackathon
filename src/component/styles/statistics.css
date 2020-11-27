@@ -1,0 +1,26 @@
+
+.logoidentify{
+    width: 62%;
+    margin-top: 8em;
+    margin-inline-start: 22em;
+    margin-block-start: -21em;
+}
+.status{
+    border:solid 2px purple;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.Excel{
+    font-size: 2em;
+   
+  border: solid 2px purple;
+  border-radius: 30%;
+  }
+  .Date{
+            font-size: 2em;
+            font-size: 2em;
+  border: solid 2px purple;
+  border-radius: 30%;
+          }
+  

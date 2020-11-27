@@ -87,16 +87,13 @@ class Traceability extends React.Component {
   render() {
     return (
       <Fragment>
-      
-       dataField="End Date"
-      alignment="right"
-      dataType="datetime"
-      format="M/d/yyyy, HH:mm"
      
-     
-     
-      <div>
-       
+      <div  className='ContainerT'>
+       <div className='headerT'>
+         <h3 className='Tickets'>TICKETS</h3>
+         <div className='Excel'>Export to Exel</div>
+         <div className='Date'>Asig for Day</div>
+       </div>
         <DataGrid id="gridContainer"
           alignment="right"
           ref={(ref) => this.dataGrid = ref}

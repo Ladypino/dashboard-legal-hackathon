@@ -2,9 +2,9 @@
   flex-direction: row;
   position: relative;
   top: -50em;
-  width: 107em;
+  width: 1em;
   height: 41em;
-  margin-inline-start: 22em;
+  margin-inline-start: 10em;
    
    
   }
@@ -13,5 +13,36 @@
     color: purple;
 }
 
+element.style {
+  width: 30%;
+}
 
+.dx-widget{
+  display: flex;
+}
+.ContainerT{
+  display: flex;
+  flex-direction:column ;
+  align-content: flex-end;
+  justify-content: end;
+width: 200em;
+}
+
+.Tickets{
+font-size: 20em;
+border: solid 2px purple;
+border-radius: 30%;
+}
+.Excel{
+  font-size: 20em;
+ 
+border: solid 2px purple;
+border-radius: 30%;
+}
+.Date{
+          font-size: 20em;
+          font-size: 20em;
+border: solid 2px purple;
+border-radius: 55%;
+        }
 
