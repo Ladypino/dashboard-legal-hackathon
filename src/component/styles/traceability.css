@@ -1,10 +1,10 @@
 #gridContainer{
   flex-direction: row;
   position: relative;
-  top: -50em;
-  width: 1em;
-  height: 41em;
-  margin-inline-start: 10em;
+  top: -117em;
+  width: 48em;
+  height: 38.9em;
+  margin-inline-start: 22em;
    
    
   }
@@ -17,15 +17,15 @@ element.style {
   width: 30%;
 }
 
-.dx-widget{
-  display: flex;
-}
+
 .ContainerT{
   display: flex;
   flex-direction:column ;
   align-content: flex-end;
   justify-content: end;
-width: 200em;
+  width:auto;
+  height: auto;
+  
 }
 
 .Tickets{
