@@ -1,8 +1,8 @@
 #gridContainer{
   flex-direction: row;
   position: relative;
-  top: -117em;
-  width: 48em;
+  top: -48em;
+  width: 73em;
   height: 38.9em;
   margin-inline-start: 22em;
    
@@ -27,22 +27,46 @@ element.style {
   height: auto;
   
 }
-
-.Tickets{
-font-size: 20em;
-border: solid 2px purple;
-border-radius: 30%;
+.headerT {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+justify-content: end;
 }
+
+  .Tickets{
+    font-size: 45px;
+    border: solid 2px purple;
+    border-radius: 30%;
+    font-family: 'Graphik';
+    font-weight: bold;
+    font-style: normal;
+    margin-top: -14em;
+    align-self: flex-start;
+    margin-inline-start: 7em;
+
+}
+
+
+
+
+
 .Excel{
-  font-size: 20em;
+  font-size: 18px;
  
 border: solid 2px purple;
 border-radius: 30%;
+  font-family: 'Graphik';
+  font-weight: normal;
+  font-style: normal;
 }
 .Date{
-          font-size: 20em;
+          font-size: 18px;
           font-size: 20em;
 border: solid 2px purple;
 border-radius: 55%;
+font-family: 'Graphik';
+font-weight: normal;
+font-style: normal;
         }
 
