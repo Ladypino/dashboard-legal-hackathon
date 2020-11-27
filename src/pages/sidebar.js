@@ -1,13 +1,9 @@
-
-
+import React, { useContext, useEffect } from 'react';
 import './Sidebar.css';
 import Traceability from './Traceability.js'
 import Statistics from './statistics.js'
-
-import React, { useContext, useEffect } from 'react';
-
-import { ShowContext } from '../../App'
-
+import LandingPage from './LandingPage.js'
+import { ShowContext } from '../App'
 import { animateScroll as scroll } from 'react-scroll';
 
 
@@ -42,31 +38,31 @@ function Sidebar() {
   if (formToShowValue === 'Logout') form = <LandingPage />
 
   return (
-    <div className='containerSectionArchiveBtnAndDonateForms'>
-      <div className='sectionArchiveButtons'>
-        <button className={classButtonArchiveOVER}
+    <div className='containerSidebar'>
+      
+        <button  className={classButtonArchiveOVER}
           onClick={() => {
             setFormToShowValue('Overview');
             setPositionScrollFormValue(scrollForm);
-          }}>NDA</button>
-        <button className={classButtonArchiveTick}
+          }}>Overview</button>
+         <button className={classButtonArchiveTick}
           onClick={() => {
             setFormToShowValue('Tickets');
             setPositionScrollFormValue(scrollForm)
-          }}>CIBERSEGURIDAD</button>
+          }}>Tickets</button>
         <button className={classButtonArchiveTEAMS} onClick={() => {
           setFormToShowValue('Teams');
           setPositionScrollFormValue(scrollForm)
-        }}>LBA</button>
+        }}>Teams</button>
         <button className={classButtonArchiveSETT} onClick={() => {
           setFormToShowValue('Settings');
           setPositionScrollFormValue(scrollForm);
-        }}>BHP</button>
+        }}>Settings</button>
         <button className={classButtonArchiveLOG} onClick={() => {
           setFormToShowValue('Logout');
           setPositionScrollFormValue(scrollForm);
-        }}>ENEL</button>
-      </div>
+        }}>Logout</button>
+      
       {form}
     </div>
   );

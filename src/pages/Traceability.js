@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import SelectBox from 'devextreme-react/select-box';
 import CheckBox from 'devextreme-react/check-box';
 import DataGrid, { FilterRow, HeaderFilter, SearchPanel, Column, Editing,} from 'devextreme-react/data-grid';
@@ -86,9 +86,17 @@ class Traceability extends React.Component {
 
   render() {
     return (
+      <Fragment>
       
-      <div>
+       dataField="End Date"
+      alignment="right"
+      dataType="datetime"
+      format="M/d/yyyy, HH:mm"
      
+     
+     
+      <div>
+       
         <DataGrid id="gridContainer"
           alignment="right"
           ref={(ref) => this.dataGrid = ref}
@@ -172,10 +180,32 @@ class Traceability extends React.Component {
 
          
         </DataGrid>
-
+        <div className="options">
+          <div className="caption">Options</div>
+          <div className="option">
+            <span>Apply Filter </span>
+            <SelectBox items={this.applyFilterTypes}
+              value={this.state.currentFilter}
+              onValueChanged={this.onCurrentFilterChanged}
+              valueExpr="key"
+              displayExpr="name"
+              disabled={!this.state.showFilterRow} />
+          </div>
+          <div className="option">
+            <CheckBox text="Filter Row"
+              value={this.state.showFilterRow}
+              onValueChanged={this.onShowFilterRowChanged} />
+          </div>
+          <div className="option">
+            <CheckBox text="Header Filter"
+              value={this.state.showHeaderFilter}
+              onValueChanged={this.onShowHeaderFilterChanged} />
+          </div>
+        </div>
+      </div>
        
         
-      </div>
+       </Fragment>
     );
     
   }

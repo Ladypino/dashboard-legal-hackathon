@@ -1,78 +1,117 @@
-.toggleHidden {
-    display: table-row;
-    flex-direction: column;
-    position: fixed;
+.containerSidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transform: translateX(-3%);
+  right: -1;
+  width: 300px;
+  height: 1400;
+
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  margin-top: -8px;
+}
+
+.toggleVisible {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(0%);
+  top: 88px;
+  right: 0px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #F4F4F4;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  z-index: 3;
+  cursor:pointer;
+}
+
+.textBurgerToggle{
+  font-size: 16px;
+  color:#929292;
+}
+
+
+.textBurgerToggle:hover{
+  color:white;
+}
+.archiveBtnOff{
+  display: flex;
+  box-sizing: unset;
+  padding:5em;
+  width: auto;
+  color:white;
+  background: black;
+  border: none;
+  margin-right: 4px;
+  height:15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.archiveBtnOff:hover{
+  background: #40015e;
+  color:white;
+}
+
+.archiveBtnOn{
+  display: flex;
+  box-sizing: unset;
+  padding:5em;
+  width: auto;
+  color:white;
+  background: black;
+  border: none;
+  margin-right: 4px;
+  height:15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.archiveBtnOn:hover{
+  background: #40015e;
+  color:white;
+}
+
+.oli{
+  text-decoration: none;
+}
+
+@media screen and (min-width:1024px){
+  .toggleHidden {
+    flex-direction: row;
+    position: relative;
     transform: translateX(0%);
-    right: -1;
-    box-sizing: border-box;
-    transition: transform 0.2s ease-in-out;
-    position: absolute;
-    width: 250.99px;
-    height: 1024px;
-    left: 0px;
+    width: auto;
+    transition: none;
+    box-sizing: inherit;
+    margin-right: 10px;
+    border: none;
+    background: rgba(145, 145, 145, 0.4);
+    top:0px;
+  }
+  .toggleVisible {
+    flex-direction: row;
+    position: relative;
     top: 0px;
-
-    
-  }
-
-
-  .boxSection:hover{
-    background: #460073;
+    right: -1;;
+    width: auto;
+    height: 15px;
+    border: none;
+    box-sizing: border-box;
+    transition: none;
+    z-index: 3;
+    margin-right: 10px;
     color:white;
+    background: rgba(145, 145, 145, 0.4);
   }
-  .textBurgerToggle:hover{
-    color:white;
-  }
-  .oli{
-    text-decoration: none;
-  }
-  
-  @media screen and (min-width:1024px){
-    .toggleHidden {
-      flex-direction: row;
-      position: relative;
-      transform: translateX(0%);
-      width: auto;
-      transition: none;
-      box-sizing: inherit;
-      margin-right: 10px;
-      border: none;
-      background: black;
-      top:0px;
-    }
-    .toggleVisible {
-      flex-direction: row;
-      position: relative;
-      top: 0px;
-      right: -1;;
-      width: auto;
-      height: 15px;
-      border: none;
-      box-sizing: border-box;
-      transition: none;
-      z-index: 3;
-      margin-right: 10px;
-      color:white;
-      background:black;
-    }
-  
-    .textBurgerToggle{
-      font-size:20px;
-      color: white;
-    }
-    .boxSection {
-      display: flex;
-      box-sizing: unset;
-      padding: 50px;
-      width: 150px;
-      color: white;
-      background: rgba(0, 0, 0, 0.4);
-      border: none;
-      height: 15px;
-      justify-content: center;
-      align-items: center;
-      top: 200px;
-  }
-    
+
+  .textBurgerToggle{
+    font-size:20px;
+    color: white;
   }
   
+}
